@@ -52,7 +52,8 @@ snippet beg "begin{} / end{}" bA
 endsnippet
 
 priority 100
-snippet ... "ldots" iA
+# coc-snippets misinterprets dots, so 5 dots means 3 dots actually
+snippet ..... "ldots" iA
 \ldots
 endsnippet
 
@@ -67,14 +68,14 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
-snippet fig "Figure environment" b
-\begin{figure}[${1:htpb}]
-	\centering
-	${2:\includegraphics[width=0.8\textwidth]{$3}}
-	\caption{${4:$3}}
-	\label{fig:${5:${3/\W+/-/g}}}
-\end{figure}
-endsnippet
+#snippet fig "Figure environment" b
+#\begin{figure}[${1:htpb}]
+	#\centering
+	#${2:\includegraphics[width=0.8\textwidth]{$3}}
+	#\caption{${4:$3}}
+	#\label{fig:${5:${3/\W+/-/g}}}
+#\end{figure}
+#endsnippet
 
 snippet enum "Enumerate" bA
 \begin{enumerate}
